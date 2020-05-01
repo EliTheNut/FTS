@@ -1,0 +1,135 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+html, body{
+    font-family: 'Montserrat', sans-serif;
+  -webkit-overflow-scrolling:touch;
+        height: 100vh ;
+        margin: 0;
+        padding: 0;
+        overflow:hidden;
+        background: linear-gradient(-45deg, #A5C882, #5AB1BB,#A5C882, #5AB1BB);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+
+
+}
+*{
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+h2{
+  z-index:2;
+  color: white;
+  width:100%;
+  text-align:center;
+  font-size:25px;
+  font-family: 'Montserrat', sans-serif;
+  position:absolute;
+
+}
+#underlineA{
+  border: solid .5px white;
+  z-index:2;
+  position:absolute;
+  top:10%;
+  width:100%;
+
+}
+#formDiv{
+  z-index:1;
+  position:absolute;
+  background: rgba(0,0,0,0.25);
+  border-radius:5px;
+  width: 90%;
+  top:5%;
+  height:90%;
+  left:5%;
+}
+#filetoupload{
+  display:none;
+  overflow: hidden;
+}
+#cssFileUploadButton{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border-radius:7px;
+  padding:10px;
+  color:white;
+  background-color:transparent;
+  border:solid white 1px;
+  position:absolute;
+  top:18%;
+  left: 10%;
+  width:73%;
+  height:30%;
+  overlow:hidden;
+
+}
+
+
+
+#submit{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  position:absolute;
+  top:55%;
+  border-radius:7px;
+  color:white;
+  background-color: transparent;
+  border:solid white 1px;
+  height:10%;
+  width:80%;
+  left:10%;
+
+}
+
+#selectedFiles span{
+
+  display:block;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+#selectedFiles{
+  column-count: 4;
+  column-fill: auto;
+  font-size:10px;
+  color:#DDD;
+  margin-top:10px;
+  margin-left:2.5%;
+  height:75%;
+  width:95%;
+  overflow:hidden;
+}
+#others{
+  z-index:2;
+  position:absolute;
+  bottom:5%;
+  width:100%;
+  text-align:center;
+  color:white;
+
+
+}
+#others a:active{
+  color:white;
+
+}
+#others a{
+  text-decoration:none;
+  color:white;
+}

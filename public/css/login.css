@@ -1,0 +1,108 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+html, body{
+padding:0;
+margin:0;
+background: linear-gradient(-45deg, #A5C882, #5AB1BB,#A5C882, #5AB1BB);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+font-family: 'Montserrat', sans-serif;
+height:600px;
+overflow:hidden;
+}
+h2{
+  width:100%;
+  text-align:center;
+  font-size:25px;
+  font-family: 'Montserrat', sans-serif;
+}
+#neccesary{
+  color:#db9a9a;
+}
+#loginDiv{
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  position:absolute;
+  background: #ebebeb;
+  border-radius:5px;
+  width: 30%;
+  top:30px;
+  height:500px;
+  left:35%;
+}
+#usernameBox{
+  font-size:18px;
+  text-align:left;
+  margin-top:60px;
+  margin-left:10%;
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+}
+#username{
+  text-indent:10px;
+  font-size:15px;
+  margin-top:10px;
+  width:80%;
+  height:50px;
+
+
+}
+#passwordBox{
+
+  font-size:18px;
+  text-align:left;
+  margin-top:30px;
+  margin-left:10%;
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+}
+::placeholder {
+  color: #d4d4d4;
+  opacity: 1;
+}
+#password{
+  text-indent:10px;
+  font-size:15px;
+  margin-top:10px;
+  width:80%;
+  height:50px;
+}
+#loginButton{
+  border-radius:5px;
+  color:white;
+  text-align:center;
+  background-color:#5AB1BB;
+  margin-top:60px;
+  margin-left:10%;
+  width:80%;
+  height:50px;
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+}
+#others{
+  position:absolute;
+  top:530px;
+  width:100%;
+  text-align:center;
+  color:black;
+
+}
+#others a:active{
+  color:black;
+
+}
+#others a{
+  color:black;
+  text-decoration:none;
+}

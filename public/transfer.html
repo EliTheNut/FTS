@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>FTS - Transfer</title>
+    <link rel="stylesheet" media="screen and (max-device-width: 500px)" href="css/transferMobile.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 500px)" href="css/transfer.css" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="manifest"  href="/manifest.json" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="transferDiv">
+      <h2 id="title"> File Transfer </h2>
+      <div id="send">
+        <h3 id="SF">Send Files</h3>
+        <form action="sendFile" method="post" id="sendFile" enctype="multipart/form-data">
+          <input id="filetoupload" type="file" name="filetoupload" multiple required>
+          <label id="cssFileUploadButton" for="filetoupload">Select Files
+          <div id="selectedFiles"></div></label>
+          <p id="uploadDesc">Upload files which you would like to transfer</p>
+          <h3 id="codeTitle">Transfer Code</h3>
+          <input for="sCode" id="sCode" type="text" name="sCode"/>
+          <p id="codeLabel">Type this code to recieve files</p>
+          <input name="submit" id="transferButton" form ="sendFile" type="submit" value="Transfer">
+
+        </form>
+
+      </div>
+      <div id="recieve">
+        <h3 id="RF">Recieve File</h3>
+          <form action="recieveFile" method="post">
+            <h3 id="recieveDesc">Transfer Code</h3>
+
+            <input name="rCode" id="codeInput" required/>
+            <input id="recieveButton" type="submit" value="Recieve"/>
+          </form>
+      </div>
+    </div>
+    <div id="others"><p><a href="/login">Log in</a> | <a href="/">Backup</a> | <a href="/login" onClick="logOut();">Log Out</a></p></div>
+    <script>
+
+    function logOut(){
+      document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+    }
+
+  var selDiv = "";
+
+  document.addEventListener("DOMContentLoaded", init, false);
+
+  function init() {
+    document.querySelector('#filetoupload').addEventListener('change', handleFileSelect, false);
+    selDiv = document.querySelector("#selectedFiles");
+
+  }
+  function devCode(){
+    var transferCode = Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('sCode').value = transferCode;
+  }
+
+  function handleFileSelect(e) {
+
+    if(!e.target.files) return;
+
+    selDiv.innerHTML = "";
+
+    var files = e.target.files;
+    for(var i=0; i<files.length; i++) {
+      var f = files[i];
+
+      selDiv.innerHTML += '<span>' + f.name + "</span>";
+
+    }
+devCode();
+  }
+  </script>
+  </body>
+</html>

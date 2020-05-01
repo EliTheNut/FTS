@@ -1,0 +1,226 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+html, body{
+padding:0;
+margin:0;
+background: linear-gradient(-45deg, #A5C882, #5AB1BB,#A5C882, #5AB1BB);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+font-family: 'Montserrat', sans-serif;
+height:600px;
+overflow:hidden;
+}
+h2{
+  width:100%;
+  text-align:center;
+  font-size:30px;
+  color: #5AB1BB;
+}
+#SF{
+  position:absolute;
+  width:40%;
+  left:5%;
+  top:40px;
+  font-size:25px;
+  color:gray;
+  text-align:center;
+
+}
+#neccesary{
+  color:#db9a9a;
+}
+#transferDiv{
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+  position:absolute;
+  background: #ebebeb;
+  border-radius:5px;
+  width: 80%;
+  top:30px;
+  height:500px;
+  left:10%;
+}
+
+#transferButton{
+  border-radius:5px;
+  color:white;
+  text-align:center;
+  position:absolute;
+  top: 300px;
+  background-color:#5AB1BB;
+  left:5%;
+  width:40%;
+  height:50px;
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+}
+#send{
+  float:left;
+  width:50%;
+  border-right:solid 1px gray;
+  height:400px;
+}
+#recieve{
+  float:right;
+  width:50%;
+  height:400px;
+}
+#filetoupload{
+  display:none;
+  overflow: hidden;
+}
+#cssFileUploadButton{
+  position:absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border-radius:7px;
+  padding:10px;
+  color:gray;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  background-color:#ebebeb;
+  width:40%;
+  height:150px;
+  left:4%;
+  top:110px;
+  overlow:hidden;
+
+}
+#uploadDesc{
+  position:absolute;
+  color:#5AB1BB;
+  font-size:10px;
+  top:275px;
+  left:5%;
+  width:40%;
+  text-align:center;
+}
+#codeTitle{
+  position:absolute;
+  font-size:15px;
+  color:gray;
+  top:360px;
+  text-align:center;
+  height:30px;
+  width:30%;
+  left:10%;
+}
+#codeLabel{
+  color:#5AB1BB;
+  position:absolute;
+  font-size:10px;
+  text-align:center;
+  top:430px;
+  height:30px;
+  width:30%;
+  left:10%;
+}
+#sCode{
+  background-color:#ebebeb;
+  position:absolute;
+  width:30%;
+  left:10%;
+  top: 400px;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  font-size:20px;
+  height:35px;
+  color:gray;
+  text-align:center;
+}
+#RF{
+  position:absolute;
+  width:40%;
+  right:5%;
+  top:40px;
+  font-size:25px;
+  color:gray;
+  text-align:center;
+
+}
+
+#recieveDesc{
+  position:absolute;
+  width:40%;
+  right:5%;
+  top:150px;
+  font-size:20px;
+  color:#5AB1BB;
+  text-align:center;
+}
+#codeInput{
+  position:absolute;
+  width:30%;
+  right:10%;
+  top:210px;
+  background-color:transparent;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+  font-size:20px;
+  height:40px;
+  color:gray;
+  text-align:center;
+}
+#selectedFiles{
+  width:95%;
+  column-count: 4;
+  column-fill: auto;
+  font-size:12px;
+  color:#bfbfbf;
+  margin-top:10px;
+  margin-left:10px;
+  height:70%;
+  overflow:hidden;
+
+}
+#selectedFiles span{
+
+  display:block;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+#recieveButton{
+  border-radius:5px;
+  color:white;
+  text-align:center;
+  position:absolute;
+  top: 270px;
+  background-color:#5AB1BB;
+  right:10%;
+  width:30%;
+  height:50px;
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+}
+#others{
+  position:absolute;
+  top:530px;
+  width:100%;
+  text-align:center;
+  color:black;
+
+}
+#others a:active{
+  color:black;
+
+}
+#others a{
+  color:black;
+  text-decoration:none;
+}

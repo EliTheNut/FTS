@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>FTS - Backup</title>
+    <link rel="stylesheet" media="screen and (max-device-width: 500px)" href="css/FTSmobile.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 500px)" href="css/FTS.css" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="manifest"  href="/manifest.json" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="formDiv">
+      <h2>File Backup</h2>
+      <hr id="underlineA">
+    <form action="fileupload" method="post" enctype="multipart/form-data">
+      <input id="filetoupload" type="file" name="filetoupload" multiple required>
+      <label id="cssFileUploadButton" for="filetoupload">Select Files
+      <div id="selectedFiles"></div></label><br>
+      <input id="submit" type="submit">
+    </form>
+  </div>
+  <div id="others"><p><a href="/login">Log in</a> | <a href="/transfer">Transfer</a> | <a href="/login" onClick="logOut();">Log Out</a></p></div>
+  <script>
+  function logOut(){
+    document.cookie = "LoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+  }
+
+var selDiv = "";
+
+document.addEventListener("DOMContentLoaded", init, false);
+
+function init() {
+  document.querySelector('#filetoupload').addEventListener('change', handleFileSelect, false);
+  selDiv = document.querySelector("#selectedFiles");
+}
+
+function handleFileSelect(e) {
+
+  if(!e.target.files) return;
+
+  selDiv.innerHTML = "";
+
+  var files = e.target.files;
+  for(var i=0; i<files.length; i++) {
+    var f = files[i];
+
+    selDiv.innerHTML += "<span>" + f.name +"</span>";
+
+  }
+
+}
+</script>
+  </body>
+</html>

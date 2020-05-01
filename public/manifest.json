@@ -1,0 +1,18 @@
+
+{
+  "lang": "en",
+  "name": "File Transfer System",
+  "short_name": "FTS",
+  "start_url": "FTS.html",
+  "display": "standalone",
+  "orientation":  "portrait",
+  "theme_color": "#43d96b",
+  "background_color": "#43d96b",
+  "type": "certified",
+  "description": "File Transfer System App",
+  "icons": [{
+    "src": "apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}
