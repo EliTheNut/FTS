@@ -9,7 +9,10 @@ var cookieParser = require('cookie-parser');
 var path = require('path');
 var zipper = require('zip-local');
 var multer  = require('multer');
-
+var dir = './Documents/Transfers/'
+if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
+}
 app.use(busboy());
 app.use(cookieParser());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
