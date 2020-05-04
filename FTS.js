@@ -32,6 +32,9 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
+if (!fs.existsSync('./Documents/Transfers/intransit/')){
+  fs.mkdirSync('./Documents/Transfers/intransit/');
+}
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/public/FTS.html'));
@@ -81,6 +84,10 @@ app.post('/fileupload', function(req, res) {
 
 app.post('/sendFile' ,upload.any(), function(req, res){
 res.setHeader('Content-Type', 'application/JSON');
+
+if (!fs.existsSync('./Documents/Transfers/zipped/')){
+  fs.mkdirSync('./Documents/Transfers/zipped/');
+}
 var transferCode = req.body.sCode;
 
 zipper.sync.zip('./Documents/Transfers/intransit/').compress().save('./Documents/Transfers/zipped/' + transferCode + ".zip");
