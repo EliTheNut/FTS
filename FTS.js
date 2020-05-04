@@ -9,7 +9,10 @@ var cookieParser = require('cookie-parser');
 var path = require('path');
 var zipper = require('zip-local');
 var multer  = require('multer');
-
+var dir = './Documents/Transfers/'
+if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
+}
 app.use(busboy());
 app.use(cookieParser());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -59,7 +62,9 @@ app.post('/fileupload', function(req, res) {
     req.busboy.on('file', function (fieldname, file, filename) {
         console.log("Uploading: " + filename);
         var type = (path.extname(filename)).substring(1);
-
+        if (!fs.existsSync('./Documents/Transfers/'+user+'/')){
+          fs.mkdirSync('./Documents/Transfers/'+user+'/');
+        }
         if (!fs.existsSync('./Documents/Transfers/'+user+'/' + type)){
           fs.mkdirSync('./Documents/Transfers/'+user+'/' + type);
         }
