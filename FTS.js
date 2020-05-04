@@ -62,7 +62,9 @@ app.post('/fileupload', function(req, res) {
     req.busboy.on('file', function (fieldname, file, filename) {
         console.log("Uploading: " + filename);
         var type = (path.extname(filename)).substring(1);
-
+        if (!fs.existsSync('./Documents/Transfers/'+user+'/')){
+          fs.mkdirSync('./Documents/Transfers/'+user+'/');
+        }
         if (!fs.existsSync('./Documents/Transfers/'+user+'/' + type)){
           fs.mkdirSync('./Documents/Transfers/'+user+'/' + type);
         }
