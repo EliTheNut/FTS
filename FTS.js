@@ -133,27 +133,15 @@ app.post('/login',urlencodedParser , function(req, res) {
     var splitData = data.split(',');
     var passData = fs.readFileSync(__dirname+'/public/lii/liip.txt', 'utf8');
     var splitPassData = passData.split(',');
-
-    if(splitData[1] == username && password == splitPassData[1]){
-
-      res.cookie('LoggedIn', 'Eli');
-    }else if(splitData[2] == username && password == splitPassData[2]){
-
-      res.cookie('LoggedIn', 'Ben');
-    }else if(splitData[3] == username && password == splitPassData[3]){
-
-      res.cookie('LoggedIn', 'Dawna');
-    }else if(splitData[4] == username && password == splitPassData[4]){
-
-      res.cookie('LoggedIn', 'Hannah');
-    }else if(splitData[5] == username && password == splitPassData[5]){
-
-      res.cookie('LoggedIn', 'Abby');
-    }else{
+    for(var i = 0; i < splitData.length; i++){
+      if(splitData[i] == username && password == splitPassData[i]){
+        res.cookie('LoggedIn', username);
+        return res.redirect('/');
+      }
+    }
       res.redirect('/login');
       return console.log("Inccorect Password or Username");
-    }
-    return res.redirect('/');
+    
 });
 
 app.listen(3000);
