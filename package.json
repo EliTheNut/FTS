@@ -1,0 +1,27 @@
+{
+  "name": "fts",
+  "version": "1.0.0",
+  "description": "A home nodeJs server which allows you to backup and transfer files between devices. The program is run with Node Js and uses many libraries. The goal of this project is to simply learn Node Js and create a simple way to transfer and backup files in my house, and possibly from anywhere in the future.",
+  "main": "FTS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliTheNut/FTS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliTheNut/FTS/issues"
+  },
+  "homepage": "https://github.com/EliTheNut/FTS#readme",
+  "dependencies": {
+    "connect-busboy": "0.0.2",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "multer": "^1.4.2",
+    "zip-local": "^0.3.4"
+  }
+}
